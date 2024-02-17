@@ -86,7 +86,6 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("task-box")) {
     e.target.classList.toggle("finished");
     allTasks = allTasks.map((ele) => {
-      console.log(e.target.textContent.replace("Delete", ""));
       if (ele.title === e.target.textContent.toString().replace("Delete", "")) {
         if (e.target.classList.contains("finished")) {
           ele.status = "completed";
